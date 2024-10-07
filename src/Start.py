@@ -12,7 +12,7 @@ window.title("(S)3 Geeky TechShop Cum Benchmark")
 window.geometry("520x293+350+140")
 
 #Background Image
-img=PhotoImage(file=r""+v+"\Data\Start.png")
+img=PhotoImage(file=r""+v+"\src\Start.png")
 w=Label(window,image=img).pack()
 
 
@@ -20,14 +20,14 @@ w=Label(window,image=img).pack()
 def fun():
     window.destroy()
     
-    spec = iu.spec_from_file_location('NewBs.py', ""+v+"\\Data\\NewBs.py")
+    spec = iu.spec_from_file_location('NewBs.py', ""+v+"\\src\\NewBs.py")
     foo = iu.module_from_spec(spec)
     spec.loader.exec_module(foo)
     
 #Button2's Function    
 def fun2():
     window.destroy()
-    spec = iu.spec_from_file_location('Verify.py', ""+v+"\\Data\\Verify.py")
+    spec = iu.spec_from_file_location('Verify.py', ""+v+"\\src\\Verify.py")
     foo = iu.module_from_spec(spec)
     spec.loader.exec_module(foo)
     

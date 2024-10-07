@@ -12,11 +12,11 @@ mc.close()
 
 m1 = mysql.connector.connect(host='localhost',user='root',password=pas,database='TechShop')
 mc = m1.cursor()
-fd = open(''+v+'/Data/soham.sql', 'r')
+fd = open(''+v+'/src/soham.sql', 'r')
 f=fd.read()
 fd.close()
 
-spec = iu.spec_from_file_location('Start.py', ""+v+"\\Data\\Start.py")
+spec = iu.spec_from_file_location('Start.py', ""+v+"\\src\\Start.py")
 foo = iu.module_from_spec(spec)
 
 

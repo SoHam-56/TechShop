@@ -19,7 +19,7 @@ window.resizable(width=False, height=False)
 window.title("Login")
 window.geometry("300x169+450+210")
 
-img=PhotoImage(file=r""+v+"\Data\Verify.png")
+img=PhotoImage(file=r""+v+"\src\Verify.png")
 w=Label(window,image=img).pack()
 
 #Labels
@@ -47,7 +47,7 @@ def fun(a, b,c):
                     
                 builtins.em = b
                 close_window()
-                spec = iu.spec_from_file_location('OldBs.py', ""+v+"\\Data\\OldBs.py")
+                spec = iu.spec_from_file_location('OldBs.py', ""+v+"\\src\\OldBs.py")
                 foo = iu.module_from_spec(spec)
                 spec.loader.exec_module(foo)
                     
@@ -63,7 +63,7 @@ def fun(a, b,c):
 #Button2's Command
 def back():
     window.destroy()
-    spec = iu.spec_from_file_location('Start.py', ""+v+"\\Data\\Start.py")
+    spec = iu.spec_from_file_location('Start.py', ""+v+"\\src\\Start.py")
     foo = iu.module_from_spec(spec)
     spec.loader.exec_module(foo) 
 #Buttons

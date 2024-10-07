@@ -29,7 +29,7 @@ table.set_data(t)
 table.place(x=246,y=72)
 
 #Background Image
-img=PhotoImage(file= r""+c+"\Data\OldB.png")
+img=PhotoImage(file= r""+c+"\src\OldB.png")
 Label(f,image=img).pack()
 
 # Entry Labels
@@ -93,7 +93,7 @@ def fun():
                 m.commit()
                 messagebox.showinfo("Hey There !","Congratulations For Your Purchase")
                 window.destroy()
-                spec = iu.spec_from_file_location('Start.py', ""+c+"\\Data\\Start.py")
+                spec = iu.spec_from_file_location('Start.py', ""+c+"\\src\\Start.py")
                 foo = iu.module_from_spec(spec)
                 spec.loader.exec_module(foo)
             else:
@@ -107,7 +107,7 @@ def fun():
 # Button2's Command
 def back():
     window.destroy()
-    spec = iu.spec_from_file_location('Start.py', ""+c+"\\Data\\Start.py")
+    spec = iu.spec_from_file_location('Start.py', ""+c+"\\src\\Start.py")
     foo = iu.module_from_spec(spec)
     spec.loader.exec_module(foo)
 

@@ -21,7 +21,7 @@ def popupmsg(msg):
         v=os.getcwd()
         
         import importlib.util as iu
-        spec = iu.spec_from_file_location('sql.py', ""+v+"\\Data\\sql.py")
+        spec = iu.spec_from_file_location('sql.py', ""+v+"\\src\\sql.py")
         foo = iu.module_from_spec(spec)
         spec.loader.exec_module(foo)
 
@@ -31,5 +31,5 @@ def popupmsg(msg):
 
 import os
 p=os.getcwd()
-fl=open(''+p+'\\Data\\Readme.txt','r')
+fl=open(''+p+'\\Data\\Disclaimer.txt','r')
 popupmsg(fl.read())
