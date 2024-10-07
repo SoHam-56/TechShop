@@ -8,7 +8,7 @@ import importlib.util as iu
 import os
 v=os.getcwd()
 
-c=(v+"\\Data")
+c=(v+"\\src")
 sys.path.insert(0,c)
 
 window=Tk()
@@ -20,7 +20,7 @@ name=Label(window,text="Enter Your MySql Password",font=('Helvetica',10,'bold'))
 e=Entry(window,bd=4,show='*')
 e.place(x=89,y=30)
 
-spec = iu.spec_from_file_location('Msg.py', ""+v+"\Data\Msg.py")
+spec = iu.spec_from_file_location('Msg.py', ""+v+"\src\Msg.py")
 foo = iu.module_from_spec(spec)
 
 def check():
